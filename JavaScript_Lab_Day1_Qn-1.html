@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Lab Day 1 - Question 1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <style type="text/css">
+			body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+				background: #d0d0f5;
+			}
+			.calculator {
+				background: #fff;
+				padding: 20px;
+				border-radius: 10px;
+				box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+				width: 300px;
+				text-align: center;
+				}		
+		</style>
+</head>
+<body>
+	<div class="calculator">
+	<h1>Calculator</h1>
+	<input id="Input1" type="text" name="" placeholder="Enter the first number"><br><br>
+	<input id="Input2" type="text" name="" placeholder="Enter the second number"><br><br>
+	<label for="operator">Operator</label>
+	<select id="operator">
+		<option>+</option>
+		<option>-</option>
+		<option>*</option>
+		<option>/</option>
+	</select><br><br>
+	<button id="equal" onclick="calculator()">Result</button>
+	<p id="result"></p>
+	<script type="text/javascript">
+		function addition(a,b){
+			return a + b;
+		}
+		function subtraction(a,b){
+			return a - b;
+		}
+		function multiplication(a,b){
+			return a * b;
+		}
+		function division(a,b){
+			return a / b;
+		}
+		function printingresult(res){
+			document.getElementById("result").innerHTML = "Result:" +res;
+		}
+		function calculator(){
+			let num1 = parseFloat(document.getElementById("Input1").value);
+			let num2 = parseFloat(document.getElementById("Input2").value);
+			let operator = document.getElementById("operator").value;
+			let result;
+			if (operator === '/' && num2 === 0) {
+				document.getElementById("result").style.color = "red";
+				document.getElementById("result").innerHTML = "Error: Division by zero!";
+				return;
+			}
+			if (operator === "+") result = addition(num1, num2);
+			else if(operator === '-') result = subtraction(num1, num2);
+			else if(operator === '*') result = multiplication(num1, num2);
+			else if(operator === '/') result = division(num1, num2);
+			printingresult(result)
+		}
+	</script>
+	</div>
+    
+</body>
+</html>
