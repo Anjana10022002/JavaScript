@@ -10,12 +10,30 @@
 <body>
     <label for = "name">Name</label>
     <input type = "text" id = "name"><br><br>
-    <label for="email">Email</label>
+    <label for="text">Email</label>
     <input type = "email" id = "email">  <br><br>
     <label for="phone">Phone number</label>
-    <input type="number" id="phone"><br><br>
+    <input type="text" id="phone"><br><br>
     <label for="password">Password</label>
     <input type = "password" id="password"><br><br>
+    <button onclick="validationForm()">Submit</button>
+    <script>
+        function validationForm(){
+            let name = document.getElementByID("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let phone = document.getElementById("phone").value.trim();
+            let password = document.getElementById("password").value.trim();
+            if (name.length < 3 || /\d/.test(name)){
+                alert("name must be at least 3 characters long and should not contain numbers");
+                return;
+            }
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(email)){
+                alert("Please enter a valid email address");
+                return;
+            }
 
+        }
+    </script>
 </body>
 </html> 
