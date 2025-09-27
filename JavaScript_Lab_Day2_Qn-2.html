@@ -11,12 +11,12 @@
 	<script>
         let contact1 = {
             name : "Alex",
-            phone : "1234567890"
+            phone : "1234567890",
             email : "alex@gmail.com",
             getInfo : function() {
                 return `Name: ${this.name}, Phone: ${this.phone}, Email: ${this.email}`;
             }
-        );
+        };
         let contact2 = {
             name: "Ajay",
             phone: "9123456780",
@@ -25,6 +25,12 @@
             getInfo: function() {
                 return `Name: ${this.name}, Phone: ${this.phone}, Email: ${this.email}`;
             }
+        };
+        function printContactInfo(contact) {
+            console.log(contact.getInfo());
+        }
+        printContactInfo(contact1);
+        printContactInfo(contact2);
     </script>
 </body>
 </html>
