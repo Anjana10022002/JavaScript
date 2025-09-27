@@ -12,7 +12,7 @@
 		let book = {
 			title: "The Alchemist",
 			author: "Paulo Coelho",
-			year: 1988
+			year: 1988,
 			getSummary : function() {
 			return `The Book ${this.title} was written by ${this.author} in ${this.year}.`;
 		}
@@ -22,8 +22,5 @@
 	}
 	printBookSummary(book);
 	</script>	
-
-	
-
 </body>
 </html>
