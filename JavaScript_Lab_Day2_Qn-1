@@ -14,6 +14,10 @@
 			author: "Paulo Coelho",
 			year: 1988
 		};
+		getSummary : function() {
+			return `The Book ${this.title} was written by ${this.author} in ${this.year}.`;
+		
+		}
 
 	</script>
 		
