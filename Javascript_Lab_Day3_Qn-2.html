@@ -12,7 +12,12 @@
             username: "CoolUser99",
             bio : "I LOVE coding! JavaScript is Great!!!"
         };
-        
+        function cleanUserBio(profile) {
+            profile.username = profile.username.trim();
+            profile.bio = profile.bio.toLowerCase();
+            
+        }
+
     </script>
 </body>
 </html>
