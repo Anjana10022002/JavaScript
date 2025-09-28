@@ -8,14 +8,14 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<p id="feedback"></p>
 	<script>
 		var feedback = "   I loved the FOOD and the service!   ";
-		document.getElementById("feedback").innerHTML = feedback.trim();
+		feedback = feedback.trim();
+		feedback = feedback.toLowerCase();
+		feedback = feedback.replace("food", "ambience");
+		console.log(feedback);
 
-		document.getElementById("feedback").innnerHTML = feedback.toLowerCase();
 
-		
 
 
     </script>
