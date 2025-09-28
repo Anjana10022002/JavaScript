@@ -16,9 +16,14 @@
             let cleanedUsername = profile.username.trim().toUpperCase();
             let cleanedBio = profile.bio.toLowerCase().trim();
             cleanedBio = cleanedBio.replace(/javascript/g, "js");
-
-            
+            let biolen = cleanedBio.length;
+            return {
+                username: cleanedUsername, 
+                bio: cleanedBio, 
+                bioLength: biolen};
         }
+        let result = cleanUserBio(userProfile);
+        console.log(result);
 
     </script>
 </body>
