@@ -11,6 +11,7 @@
     <p id="userScore"></p>
     <p id="differnce"></p>
     <p id="roundedSquare"></p>
+    <p id="ImplicitConversion"></p>
 	<script>
         let randomNumber = Math.floor(Math.random()*100);
         document.getElementById("randomNumber").innerHTML ="Random Number: " +randomNumber;
@@ -21,6 +22,9 @@
         let roundedSquare = Math.round(Math.sqrt(userScore));
         document.getElementById("roundedSquare").innerHTML = "Rounded Square: " +roundedSquare;
         document.write("Pi constant: " +Math.PI);
+        
+        let a = "50" * 2;
+        document.getElementById("ImplicitConversion").innerHTML = "Implicit conversion: " + a;
     </script>
 
 </body>
