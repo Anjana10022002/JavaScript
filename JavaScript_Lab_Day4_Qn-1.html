@@ -9,10 +9,16 @@
 <body>
     <p id="randomNumber"></p>
     <p id="userScore"></p>
+    <p id="differnce"></p>
 	<script>
-        document.getElementById("randomNumber").innerHTML = Math.floor(Math.random()*100);
-        let userScore = "45"
-        document.getElementById("userScore").innerHTML = Number(userScore)
+        let randomNumber = Math.floor(Math.random()*100);
+        document.getElementById("randomNumber").innerHTML = randomNumber;
+        let userScore = "45";
+        document.getElementById("userScore").innerHTML = Number(userScore);
+        let difference = Math.abs(randomNumber - userScore);
+        document.getElementById("differnce").innerHTML = difference;
+
+
     </script>
 
 </body>
