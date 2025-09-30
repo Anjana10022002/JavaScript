@@ -8,9 +8,13 @@
 </head>
 <body>
     <script>
-        console.log(Math.floor(Math.random() * 50));
-        let userScore = 78;
-        
+        let MysteryLevel =  +Math.floor(Math.random() * 50);
+        console.log("MysteryLevel =" +MysteryLevel);
+        let userScore = "78";
+        console.log("User score: " +Number(userScore));
+        console.log("Difference: " +Math.abs(MysteryLevel - userScore));
+
+
     </script>
 </body>
 </html>
