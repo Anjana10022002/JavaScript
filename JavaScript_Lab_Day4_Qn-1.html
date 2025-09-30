@@ -10,14 +10,16 @@
     <p id="randomNumber"></p>
     <p id="userScore"></p>
     <p id="differnce"></p>
+    <p id="roundedSquare"></p>
 	<script>
         let randomNumber = Math.floor(Math.random()*100);
-        document.getElementById("randomNumber").innerHTML = randomNumber;
+        document.getElementById("randomNumber").innerHTML ="Random Number: " +randomNumber;
         let userScore = "45";
-        document.getElementById("userScore").innerHTML = Number(userScore);
+        document.getElementById("userScore").innerHTML ="User Score: " +Number(userScore);
         let difference = Math.abs(randomNumber - userScore);
-        document.getElementById("differnce").innerHTML = difference;
-
+        document.getElementById("differnce").innerHTML ="Differnce: " +difference;
+        let roundedSquare = Math.round(Math.sqrt(userScore));
+        document.getElementById("roundedSquare").innerHTML = "Rounded Square: " +roundedSquare;
 
     </script>
 
