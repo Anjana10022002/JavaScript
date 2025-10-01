@@ -9,6 +9,7 @@
 <body>
     <button onclick="">Click here to check return eligibility</button>
     <p id="message"></p>
+    <p id="itemNameExistance"></p>
     <script>
         function clickReturn(){
         let order = {
@@ -16,13 +17,11 @@
             isDelivered: true,
             daysSinceDelivery: 5
         };
-        let message = (order.isDelivered && order.daysSinceDelivery <=7)? "Eligible for return" : "Return period expired"
+        let message = (order.isDelivered && order.daysSinceDelivery <=7)? "Eligible for return" : "Return period expired";
         document.getElementById(message).innerHTML = message;
-        }
-        
-        
-
-
+        let checkItemName = ("itemName" in order)? "itemName exist in order" : "itemName is not exist in order";
+        document.getElementById("itemNameExistance").innerHTML = checkItemName;
+    }
     </script>
 </body>
 </html>
