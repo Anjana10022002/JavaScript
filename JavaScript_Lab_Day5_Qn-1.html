@@ -7,13 +7,20 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <button onclick="">Click Me</button>
+    <button onclick="">Click here to check return eligibility</button>
+    <p id="message"></p>
     <script>
+        function clickReturn(){
         let order = {
             itemName: "Bluetooth Speaker",
             isDelivered: true,
             daysSinceDelivery: 5
         };
+        let message = (order.isDelivered && order.daysSinceDelivery <=7)? "Eligible for return" : "Return period expired"
+        document.getElementById(message).innerHTML = message;
+        }
+        
+        
 
 
     </script>
