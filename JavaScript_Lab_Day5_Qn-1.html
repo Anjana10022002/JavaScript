@@ -19,7 +19,7 @@
             daysSinceDelivery: 5
         };
         let message = (order.isDelivered && order.daysSinceDelivery <=7)? "Eligible for return" : "Return period expired";
-        document.getElementById(message).innerHTML = message;
+        document.getElementById("message").innerHTML = message;
         let checkItemName = ("itemName" in order)? "itemName exist in order" : "itemName is not exist in order";
         document.getElementById("itemNameExistance").innerHTML = checkItemName;
         delete order.daysSinceDelivery;
