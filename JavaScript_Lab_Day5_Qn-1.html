@@ -10,6 +10,7 @@
     <button onclick="">Click here to check return eligibility</button>
     <p id="message"></p>
     <p id="itemNameExistance"></p>
+    <p id="deletion"></p>
     <script>
         function clickReturn(){
         let order = {
@@ -21,6 +22,9 @@
         document.getElementById(message).innerHTML = message;
         let checkItemName = ("itemName" in order)? "itemName exist in order" : "itemName is not exist in order";
         document.getElementById("itemNameExistance").innerHTML = checkItemName;
+        delete order.daysSinceDelivery;
+        document.getElementById("deletion").innerHTML = "After delete: " + JSON.stringify(order);
+    
     }
     </script>
 </body>
