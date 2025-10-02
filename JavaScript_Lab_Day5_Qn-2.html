@@ -7,15 +7,19 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <button onclick="userProfileAccess">Click here to check access</button>
+    <button onclick="userProfileAccess()">Click here to check access</button>
+    <p id="profile"></p>
     <script>
-        function userProfileAccess(){
-            let user = {
+        let user = {
                 userName: "ABC",
                 Age: 23,
                 isAdmin: true
             };
-        };
+            document.getElementById("profile").innerHTML = "User Name: " +user.userName +"  Age: " +user.Age + "  Admin: "+user.isAdmin;
+        function userProfileAccess(){
+    
+       };
+
 
             
         
