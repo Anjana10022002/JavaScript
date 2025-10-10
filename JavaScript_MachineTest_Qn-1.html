@@ -45,4 +45,9 @@
 			let num2 = parseFloat(document.getElementById("Input2").value);
 			let operator = document.getElementById("operator").value;
 			let result;
+			if (operator === '/' && num2 === 0) {
+				document.getElementById("result").style.color = "red";
+				document.getElementById("result").innerHTML = "Error: Division by zero!";
+				return;
+			}
 			
