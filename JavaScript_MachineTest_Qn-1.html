@@ -50,4 +50,13 @@
 				document.getElementById("result").innerHTML = "Error: Division by zero!";
 				return;
 			}
-			
+			if (operator === "+") result = addition(num1, num2);
+			else if(operator === '-') result = subtraction(num1, num2);
+			else if(operator === '*') result = multiplication(num1, num2);
+			else if(operator === '/') result = division(num1, num2);
+			printingresult(result)
+		}
+	</script>
+	</div>
+</body>
+</html>
