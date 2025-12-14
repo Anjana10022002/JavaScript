@@ -6,3 +6,20 @@
 #     print("Not eligible for voting")
 
 # 2. Find largest of three numbers
+# a = int(input("Enter the first number:"))
+# b = int(input("Enter the second number:"))
+# c = int(input("Enter the third number:"))
+# if (a>b and a>c):
+#     print(a, "is the largest")
+# elif(b>a and b>c):
+#     print(b, "is the largest")
+# else:
+#     print(c, "is the largest")
+
+
+#3. Check leap year
+# a = int(input("Enter the year:"))
+# if (((a % 4 == 0) and (a % 100 != 0)) or ((a % 400 == 0))):
+#     print(a, "is a leap year")
+# else:
+#     print(a, "is not a leap year")
