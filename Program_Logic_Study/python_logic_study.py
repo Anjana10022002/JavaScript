@@ -25,8 +25,15 @@
 #     print(a, "is not a leap year")
 
 # 4. Sum of First N Numbers
-n = int(input("Enter n:"))
-sum = 0
-for i in range(1, n + 1):
-    sum = sum + i
-print("Sum is: ",sum)
+# n = int(input("Enter n:"))
+# sum = 0
+# for i in range(1, n + 1):
+#     sum = sum + i
+# print("Sum is: ",sum)
+
+# 5. Factorial of a number
+# n = int(input("Enter the number: "))
+# fact = 1
+# for i in range (1, n+1):
+#     fact = fact * i
+# print("The factorial is: ", fact)
