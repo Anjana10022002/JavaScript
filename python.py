@@ -1,9 +1,10 @@
 num = int(input("Enter a number: "))
 # 123
+rev = 0
 while num > 0:
     digit = num % 10
     rev = rev * 10 + digit
-    n //= 10
+    num //= 10
 print("Reverse:", rev)
 
     
