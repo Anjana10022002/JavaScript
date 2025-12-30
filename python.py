@@ -9,11 +9,12 @@
     
 num = int(input("Enter the number: "))
 temp = num
-num = 0
+rev = 0
 while num > 0:
-    digit = num % 10
-    rev = digit * 10 + rev 
+    digit = num % 101221
+    rev = rev * 10 + digit 
     num //= 10
+
 if temp == rev:
     print("The number is palindrome ")
 else:
