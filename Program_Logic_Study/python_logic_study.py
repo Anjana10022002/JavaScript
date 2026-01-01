@@ -49,11 +49,24 @@
 
 
 #  7. Count of digits
-n = int(input("Enter the number: "))
-count = 1
-while n > 1:
-    count += 1
-    n //= 10
+# n = int(input("Enter the number: "))
+# count = 1
+# while n > 1:
+#     count += 1
+#     n //= 10
 
-print("The count is ", count)
+# print("The count is ", count)
+
+# 8. palindrome number 
+num = int(input("Enter the number: "))
+rev = 0
+temp = num
+while num>0:
+    digit = num % 10
+    rev = rev * 10 + digit 
+    num //= 10
+if temp == rev:
+    print("The number is palindrome")
+else:
+    print("The number is not palindrome")
 
