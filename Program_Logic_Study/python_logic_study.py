@@ -51,8 +51,9 @@
 #  7. Count of digits
 n = int(input("Enter the number: "))
 count = 1
-while (n > 1):
-    digit = n // 10
+while n > 1:
     count += 1
+    n //= 10
+
 print("The count is ", count)
 
