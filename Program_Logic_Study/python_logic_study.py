@@ -58,15 +58,20 @@
 # print("The count is ", count)
 
 # 8. palindrome number 
-num = int(input("Enter the number: "))
-rev = 0
-temp = num
-while num>0:
-    digit = num % 10
-    rev = rev * 10 + digit 
-    num //= 10
-if temp == rev:
-    print("The number is palindrome")
-else:
-    print("The number is not palindrome")
+# num = int(input("Enter the number: "))
+# rev = 0
+# temp = num
+# while num>0:
+#     digit = num % 10
+#     rev = rev * 10 + digit 
+#     num //= 10
+# if temp == rev:
+#     print("The number is palindrome")
+# else:
+#     print("The number is not palindrome")
 
+
+# 9. Print numbers from N to 1
+n = int(input("Enter the number:"))
+for i in range(n, 0, -1):
+    print(i)
