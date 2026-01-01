@@ -39,10 +39,20 @@
 # print("The factorial is: ", fact)
 
 # 6. Reverse a string 
+# n = int(input("Enter the number: "))
+# rev = 0
+# while n > 0:
+#     digit = n % 10
+#     rev = rev * 10 + digit
+#     n //= 10
+# print("Reverse of the numbeer is:", rev)
+
+
+#  7. Count of digits
 n = int(input("Enter the number: "))
-rev = 0
-while n > 0:
-    digit = n % 10
-    rev = rev * 10 + digit
-    n //= 10
-print("Reverse of the numbeer is:", rev)
+count = 1
+while (n > 1):
+    digit = n // 10
+    count += 1
+print("The count is ", count)
+
