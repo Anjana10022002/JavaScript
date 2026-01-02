@@ -70,8 +70,9 @@
 # else:
 #     print("The number is not palindrome")
 
-
 # 9. Print numbers from N to 1
 # n = int(input("Enter the number:"))
 # for i in range(n, 0, -1):
 #     print(i)
+
+# 10. Sum of digits
