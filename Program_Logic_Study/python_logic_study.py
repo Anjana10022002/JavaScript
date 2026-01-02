@@ -76,3 +76,4 @@
 #     print(i)
 
 # 10. Sum of digits
+n = int(input("Enter the number: "))
