@@ -122,14 +122,31 @@
         // console.log("Maximum: ", max);
 
         // 12. Minimum in array
-        let n = [12,45,85,65,78,57]
-        let min_val = n[0]
-        for (let i = 0; i < n.lenght; i ++){
-            if (n[i] < min_val){
-                min_val = n[i];
+        // let n = [12,45,85,65,78,57]
+        // let min_val = n[0]
+        // for (let i = 0; i < n.lenght; i ++){
+        //     if (n[i] < min_val){
+        //         min_val = n[i];
+        //     }
+        // }
+        // console.log("Minimum: ", min_val)
+
+        // 13. Search an element
+        let n = [12,45,85,65,78,57];
+        let target = 12;
+        let found = false;
+        for (let i = 0; i<n.length; i++){
+            if (n[i] === target){
+                found = true;
+                break;
             }
         }
-        console.log("Minimum: ", min_val)
+        if (found){
+            console.log("Element found");
+        }
+        else{
+            console.log("Element not found");
+        }
 
         
 

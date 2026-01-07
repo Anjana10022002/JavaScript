@@ -100,3 +100,16 @@
 #     if n[i] < min_val:
 #         min_val = n[i]
 # print("Minimum: ", min_val)
+
+# 13. search an element
+# n = [98,5,65,89,6,45]
+# target = 100
+# found = False
+# for i in range (0, len(n)):
+#     if (n[i] == target):
+#         found = True
+#         break
+# if found:
+#     print("Element found")
+# else:
+#     print("Element not found")
