@@ -76,4 +76,19 @@
 #     print(i)
 
 # 10. Sum of digits
-n = int(input("Enter the number: "))
+# n = int(input("Enter the number: "))
+# sum = 0
+# while n > 0:
+#     digit = n % 10
+#     sum = sum + digit 
+#     n //=10
+# print("Sum:", sum)
+
+# 11. Maximum in array
+# n = [12,56,78,95,12,42]
+# max_val = n[0]
+# for i in range (1, len(n)):
+#     if n[i] > max_val:
+#         max_val = n[i]
+
+# print("Maximum: ", max_val)

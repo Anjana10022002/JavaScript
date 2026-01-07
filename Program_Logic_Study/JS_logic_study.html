@@ -96,11 +96,30 @@
         // }
 
         // 9. Print numbers from N to 1
-        let m = parseInt(prompt("Enter the number:"));
-        for (let i= 0; i < m; i++){
-            console.log(m - i);
-        }   
+        // let m = parseInt(prompt("Enter the number:"));
+        // for (let i= 0; i < m; i++){
+        //     console.log(m - i);
+        // }   
 
+        // 10.  Sum of digits
+        // let n = parseInt(prompt("Enter the number:"));
+        // let sum = 0;
+        // while(n>0){
+        //     let digit = n % 10;
+        //     sum +=digit;
+        //     n = Math.floor(n/10);
+        // }
+        // console.log("Sum: ", sum);
+
+        // 11. Maximum in array
+        let n = [12,45,85,65,78,57]
+        let max = n[0];
+        for (let i = 0; i<n.length; i++){
+            if (n[i] > max){
+                max = n[i];
+            }
+        }
+        console.log("Maximum: ", max);
 
 
         
