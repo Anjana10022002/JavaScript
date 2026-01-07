@@ -113,3 +113,5 @@
 #     print("Element found")
 # else:
 #     print("Element not found")
+
+# 14. Count Occurrences
