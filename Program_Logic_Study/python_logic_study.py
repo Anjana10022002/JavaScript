@@ -92,3 +92,11 @@
 #         max_val = n[i]
 
 # print("Maximum: ", max_val)
+
+# 12. Minimaum in array 
+# n = [98,5,65,89,6,45]
+# min_val = n[0]
+# for i in range(1, len(n)):
+#     if n[i] < min_val:
+#         min_val = n[i]
+# print("Minimum: ", min_val)
