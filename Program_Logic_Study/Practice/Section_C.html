@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section C</title>
+    <style>
+        body {
+            background-color: aliceblue;
+        }
+        form {
+            margin: auto;
+            padding: 50px;
+            width: 300px;
+            background-color: white;
+        }
+        input {
+            width: 90%;
+            padding: 8px;
+            margin: 5px;
+        }
+        button {
+            padding: 8px 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body >
+    <form id="form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>    
+        <button type="submit" onclick="formValidation()">Submit</button>
+        <p id="message"></p>
+    </form>
+
+    <script>
+        function formValidation(event){
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message");
+
+            if (name == ""){
+                message.innerHTML = "Name field cannot be empty"
+            }
+            else if(!email.includes("@")){
+                message.innerHTML = "Please enter a valid email address"
+            }
+            else{
+                message.innerHTML = "Form submitted successfully!"
+            }
+        }
+    </script>
+    
+</body>
+</html>
