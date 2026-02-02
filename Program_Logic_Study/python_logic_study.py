@@ -144,13 +144,58 @@
 # print("Duplicates:", dupli)
 
 # 16. Second largest number 
-arr = [10,57,39,68,90,27]
-largest = arr[0]
-second_largest = -1
-for i in range(len(arr)):
-    if arr[i]>largest:
-        second_largest = largest
-        largest = arr[i]
-    elif second_largest > largest:
-        largest = second_largest
-print("Second largest:", second_largest)
+# arr = [10,57,39,68,90,27]
+# largest = arr[0]
+# second_largest = -1
+# for i in range(len(arr)):
+#     if arr[i]>largest:
+#         second_largest = largest
+#         largest = arr[i]
+#     elif second_largest > largest:
+#         largest = second_largest
+# print("Second largest:", second_largest)
+
+# 17. Reverse an array
+# arr = [1,2,3,4]
+# reverse = []
+# for i in range(len(arr)):
+#     reverse = arr[::-1]
+# print(reverse)
+
+# arr = [1,2,3,4]
+# left = 0
+# right = len(arr) -1
+# while left < right:
+#     arr[left], arr[right] = arr[right], arr[left]
+#     left +=1
+#     right -=1
+# print("Reverse:",arr)
+
+# 18. Sum of array elements
+# arr = [1,2,3,4]
+# sum = 0
+# for i in range(len(arr)):
+#     sum = sum + arr[i]
+# print (sum)
+
+# 19. Remove duplicates 
+# arr = [1,2,3,4,5,6,7,1,3,4,2,5]
+# set = set(arr)
+# print(set)
+
+# arr = [1,2,3,4,5,6,7,1,3,4,2,5]
+# without_duplicates  = []
+# for n in arr:
+#     if n not in without_duplicates:
+#         without_duplicates.append(n)
+# print(without_duplicates)
+
+# arr1 = [1,2,3,4]
+# arr2 = [5,6,7,8]
+# merge = arr1 + arr2
+# print(merge)
+
+# arr1 = [1,2,3,4]
+# arr2 = [5,6,7,8]
+# arr1.extend(arr2)
+# print(arr1)
