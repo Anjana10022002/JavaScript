@@ -115,3 +115,42 @@
 #     print("Element not found")
 
 # 14. Count Occurrences
+# arr = [1,2,3,4,2,5,2,6]
+# target = 2
+# count = 0
+
+# for i in arr:
+#     if arr[i] == target:
+#         count +=1
+
+# print("Count:", count)
+
+# 15. Find duplicate elements 
+# arr = [1,3,5,3,6,8,9,7, 9, 7]
+# duplicates = []
+# for i in range(len(arr)):
+#     for j in range(1+i, len(arr)):
+#         if arr[i] == arr[j] and arr[i] not in duplicates:
+#             duplicates.append(arr[i])
+# print("Duplicates:", duplicates)
+
+# arr = [1,2,3,4,5,6,7,1,3,4,2,5]
+# dupli = []
+# for i in range(len(arr)):
+#     for j in range(1+i, len(arr)):
+#         if arr[i] == arr[j] and arr[i] not in dupli:
+#             dupli.append(arr[i])
+
+# print("Duplicates:", dupli)
+
+# 16. Second largest number 
+arr = [10,57,39,68,90,27]
+largest = arr[0]
+second_largest = -1
+for i in range(len(arr)):
+    if arr[i]>largest:
+        second_largest = largest
+        largest = arr[i]
+    elif second_largest > largest:
+        largest = second_largest
+print("Second largest:", second_largest)
