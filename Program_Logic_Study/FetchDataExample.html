@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Todos List</title>
+  <title>Todos Table</title>
 
-  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -13,43 +12,134 @@
   <div class="container mt-5">
     <div class="card shadow">
       <div class="card-body">
-        <h3 class="text-center mb-4">📋 Todos List</h3>
+        <h3 class="text-center mb-3">📋 Todo List</h3>
+        
+        <div class="d-flex justify-content-between mb-3">
+          <input type="text" id="searchInput" class="form-control w-50" placeholder="Search by title...">
+          <span class="fw-bold">Count: <span id="count">0</span></span>
+        </div>
 
-        <table class="table table-bordered table-hover">
+        <table class="table table-bordered table-hover text-center">
           <thead class="table-dark">
             <tr>
-              <th>ID</th>
+              <th>User ID</th>
+              <th>Todo ID</th>
               <th>Title</th>
               <th>Completed</th>
+              <th>Action</th>
             </tr>
           </thead>
-          <tbody id="todoTable">
-            <!-- Data will be added here -->
-          </tbody>
+
+          <tbody id="todoTable"></tbody>
         </table>
 
       </div>
     </div>
   </div>
 
+  <!-- Delete Confirmation Modal -->
+  <div class="modal fade" id="deleteModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title">Confirm Delete</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+          Are you sure you want to delete this todo?
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-danger" onclick="confirmDelete()">Delete</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification (ADDED) -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="deleteToast" class="toast align-items-center text-bg-success border-0">
+      <div class="d-flex">
+        <div class="toast-body">
+          Todo deleted successfully!
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
   <script>
+    let allData = [];
+    let deleteIndex = null;
+
     fetch("https://jsonplaceholder.typicode.com/todos/")
       .then(response => response.json())
       .then(data => {
-        let tableBody = document.getElementById("todoTable");
-
-        data.forEach(todo => {
-          let row = document.createElement("tr");
-
-          row.innerHTML = `
-            <td>${todo.id}</td>
-            <td>${todo.title}</td>
-            <td>${todo.completed ? "✅ Yes" : "❌ No"}</td>
-          `;
-
-          tableBody.appendChild(row);
-        });
+        allData = data;
+        displayData(data);
       });
+
+    function displayData(data) {
+      let tableBody = document.getElementById("todoTable");
+      tableBody.innerHTML = "";
+
+      data.forEach((todo, index) => {
+        let row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${todo.userId}</td>
+          <td>${todo.id}</td>
+          <td class="text-start">${todo.title}</td>
+          <td>${todo.completed ? "✅ Yes" : "❌ No"}</td>
+          <td>
+            <button class="btn btn-sm btn-danger"
+              data-bs-toggle="modal"
+              data-bs-target="#deleteModal"
+              onclick="setDeleteIndex(${index})">
+              Delete
+            </button>
+          </td>
+        `;
+        tableBody.appendChild(row);
+      });
+
+      document.getElementById("count").innerText = data.length;
+    }
+
+    document.getElementById("searchInput").addEventListener("keyup", function () {
+      let searchValue = this.value.toLowerCase();
+      let filteredData = allData.filter(todo =>
+        todo.title.toLowerCase().includes(searchValue)
+      );
+      displayData(filteredData);
+    });
+
+    function setDeleteIndex(index) {
+      deleteIndex = index;
+    }
+
+    function confirmDelete() {
+      allData.splice(deleteIndex, 1);
+      displayData(allData);
+
+      // Hide modal
+      let modal = bootstrap.Modal.getInstance(
+        document.getElementById("deleteModal")
+      );
+      modal.hide();
+
+      // SHOW TOAST (ADDED FEATURE)
+      let toast = new bootstrap.Toast(
+        document.getElementById("deleteToast")
+      );
+      toast.show();
+    }
   </script>
 
 </body>
