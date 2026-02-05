@@ -190,6 +190,7 @@
 #         without_duplicates.append(n)
 # print(without_duplicates)
 
+# 20. Merge two arrays
 # arr1 = [1,2,3,4]
 # arr2 = [5,6,7,8]
 # merge = arr1 + arr2
@@ -199,3 +200,99 @@
 # arr2 = [5,6,7,8]
 # arr1.extend(arr2)
 # print(arr1)
+
+# 21. Reverse a string
+# str = "abcdef"
+# rev = ""
+# for i in range(len(str)-1, -1, -1):
+#     rev +=str[i]
+# print("Reverse:", rev)
+
+# str = "abcdef"
+# print(str[::-1])
+
+# 22. Palindrome string
+# str = "malayalam"
+# rev = ""
+# for i in range(len(str)-1, -1, -1):
+#     rev +=str[i]
+# if str == rev:
+#     print("Palindrome")
+# else:
+#     print("Not a palindrome")
+
+# 23. count for vowels
+# str = "Anjana"
+# vowels = "AEIOUaeiou"
+# count = 0
+# for i in str:
+#     if i in vowels:
+#         count += 1
+# print ("Count:", count)
+
+# str = "Anjanapr"
+# vowels = "AEIOUaeiou"
+# count = 0
+# for i in str:
+#     if i not in vowels:
+#         count +=1
+# print("Count:", count)
+
+# 24. Count Frequency of Characters
+# str = "aabcghdassana"
+# freq = {}
+# for s in str:
+#     if s in freq:
+#         freq[s] +=1
+#     else:
+#         freq[s] = 1
+# print("Frequency:", freq)
+
+# 25. Removing whitespaces 
+# str = "Hello World"
+# res = ""
+# for s in str:
+#     if s != " ":
+#         res += s
+# print("Result:", res)
+
+# 26. Count words
+# str = "I am currently studying python"
+# count = 1
+
+# for s in str:
+#     if s == " ":
+#         count +=1
+# print("Count:", count)
+
+# 27. Count consonants
+# str = "Anjanaprs"
+# vowels = "AEIOUaeiou"
+# count = 0
+# for s in str:
+#     if s not in vowels:
+#         count +=1
+# print("Count:", count)
+
+# 28. First non repeating character
+# str = "abcdesfabcsd"
+# freq = {}
+# non_repeating = ""
+
+# for s in str:
+#     if s in freq:
+#         freq[s] +=1
+#     else:
+#         freq[s] =1
+
+# for s in str:
+#     if freq[s] == 1:
+#         non_repeating = s
+#         break
+# print ("First Non-Repeating:", s)
+
+# 29. Reverse each word in a string 
+str = "I am currently studying python"
+rev = ""
+for s in str:
+    

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Single Field Form</title>
+</head>
+<body>
+
+  <form>
+    <label>Name:</label><br>
+    <input type="text" id="name"><br><br>
+  </form>
+
+  <button onclick="showData()">Submit</button>
+
+  <br><br>
+
+  <p id="result"></p>
+
+  <script>
+    function showData() {
+      let name = document.getElementById("name").value;
+
+      let output = document.getElementById("result");
+      output.innerText = "Name: " + name;
+      output.style.color = "red";    
+      output.style.fontWeight = "bold";
+    }
+  </script>
+
+</body>
+</html>

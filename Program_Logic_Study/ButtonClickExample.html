@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Paragraph Copy Example</title>
+</head>
+<body>
+
+  <p id="myPara">
+    This is a simple paragraph. When you click the button,
+    this entire text will be printed below the button.
+  </p>
+
+  <button onclick="copyParagraph()">Click Me</button>
+
+  <br><br>
+
+  <p id="output"></p>
+
+  <script>
+    function copyParagraph() {
+      let text = document.getElementById("myPara").innerText;
+      document.getElementById("output").innerText = text;
+    }
+  </script>
+
+</body>
+</html>
