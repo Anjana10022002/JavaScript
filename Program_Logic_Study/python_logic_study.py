@@ -289,10 +289,70 @@
 #     if freq[s] == 1:
 #         non_repeating = s
 #         break
-# print ("First Non-Repeating:", s)
+# print ("First Non-Repeating:", non_repeating)
 
 # 29. Reverse each word in a string 
-str = "I am currently studying python"
-rev = ""
-for s in str:
+# str = "I am currently studying python"
+# rev = ""
+# for s in str:
     
+
+
+# 30. Anagram check
+# str1 = "listen"
+# str2 = "silents"
+# freq1 = {}
+# freq2 = {}
+
+# for s in str1:
+#     if s in freq1:
+#         freq1[s] += 1
+#     else:
+#         freq1[s] = 1
+
+# for s in str2:
+#     if s in freq2:
+#         freq2[s] +=1
+#     else:
+#         freq2[s] = 1
+
+# if freq1 == freq2:
+#     print("Anagram")
+# else:
+#     print("Not anagram")
+
+# 31. Prime number
+# n = 5
+# is_prime = True
+# if n <= 1:
+#     is_prime = False
+# else:
+#     for i in range(2, n):
+#         if n % i == 0:
+#             is_prime = False
+#             break
+# if is_prime:
+#     print("Prime")
+# else:
+#     print("Not prime")
+
+# 32. Armstrong Number
+# n = 153
+# temp = n
+# power = len(str(n))
+# total = 0
+# while temp > 0:
+#     digit = temp % 10
+#     total += digit ** power
+#     temp //= 10
+# if n == total:
+#     print("Armstrong")
+# else:
+#     print("Not armstrong")
+
+# 33. Find Missing Number (Array 1 to N)
+a = [1,2,3,5,6,7]
+n = len(a) + 1 
+expected = n*(n+1)//2
+array_sum = sum(a)
+print("Missing number:", array_sum - expected)
