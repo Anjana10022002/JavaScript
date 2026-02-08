@@ -351,8 +351,33 @@
 #     print("Not armstrong")
 
 # 33. Find Missing Number (Array 1 to N)
-a = [1,2,3,5,6,7]
-n = len(a) + 1 
-expected = n*(n+1)//2
-array_sum = sum(a)
-print("Missing number:", array_sum - expected)
+# a = [1,3,4,5,6]
+# n = len(a) + 1
+
+# expected = n*(n+1)//2
+# array_sum = sum(a)
+# print("Missing:", expected - array_sum)
+
+# 34. Move Zeros to End (VERY COMMON)
+
+# arr = [1,4,0,9,3,5,0,7,0,4,0,2,1]
+# pos = 0
+# for i in range(1, len(arr)):
+#     if arr[i] != 0:
+#         arr[pos] = arr[i]
+#         pos +=1
+# while pos < len(arr):
+#     arr[pos] = 0
+#     pos +=1
+# print(arr)
+
+# 35. Find Intersection of Two Arrays
+arr1 = [1,2,3,4,5,6]
+arr2 = [5,6,7,8,9,0]
+result =[]
+
+for i in arr1:
+    if i in arr2 and i not in result:
+        result.append(i)
+print(result)
+
