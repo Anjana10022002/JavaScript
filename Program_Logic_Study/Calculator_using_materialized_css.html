@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Materialize Calculator</title>
+
+  <!-- Materialize CSS -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    rel="stylesheet"
+  >
+
+  <style>
+    .calculator {
+      max-width: 350px;
+      margin: 50px auto;
+    }
+    .btn {
+      width: 100%;
+      font-size: 18px;
+    }
+    input {
+      font-size: 22px !important;
+      text-align: right;
+    }
+  </style>
+</head>
+
+<body class="grey lighten-4">
+
+  <div class="card calculator">
+    <div class="card-content">
+
+      <span class="card-title center">Calculator</span>
+
+      <!-- Display -->
+      <input type="text" id="result" disabled>
+
+      <!-- Buttons -->
+      <div class="row">
+        <div class="col s3"><button class="btn" onclick="append('7')">7</button></div>
+        <div class="col s3"><button class="btn" onclick="append('8')">8</button></div>
+        <div class="col s3"><button class="btn" onclick="append('9')">9</button></div>
+        <div class="col s3"><button class="btn orange" onclick="append('/')">÷</button></div>
+      </div>
+
+      <div class="row">
+        <div class="col s3"><button class="btn" onclick="append('4')">4</button></div>
+        <div class="col s3"><button class="btn" onclick="append('5')">5</button></div>
+        <div class="col s3"><button class="btn" onclick="append('6')">6</button></div>
+        <div class="col s3"><button class="btn orange" onclick="append('*')">×</button></div>
+      </div>
+
+      <div class="row">
+        <div class="col s3"><button class="btn" onclick="append('1')">1</button></div>
+        <div class="col s3"><button class="btn" onclick="append('2')">2</button></div>
+        <div class="col s3"><button class="btn" onclick="append('3')">3</button></div>
+        <div class="col s3"><button class="btn orange" onclick="append('-')">−</button></div>
+      </div>
+
+      <div class="row">
+        <div class="col s3"><button class="btn red" onclick="clearResult()">C</button></div>
+        <div class="col s3"><button class="btn" onclick="append('0')">0</button></div>
+        <div class="col s3"><button class="btn green" onclick="calculate()">=</button></div>
+        <div class="col s3"><button class="btn orange" onclick="append('+')">+</button></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JS Logic -->
+  <script>
+    let output = document.getElementById("result");
+
+    function append(value) {
+      output.value += value;
+    }
+
+    function clearResult() {
+      output.value = "";
+    }
+
+    function calculate() {
+      try {
+        output.value = eval(output.value);
+      } catch {
+        output.value = "Error";
+      }
+    }
+  </script>
+
+</body>
+</html>
