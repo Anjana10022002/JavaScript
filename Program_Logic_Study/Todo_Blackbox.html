@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List - Black Box</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-section {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        #task-input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+        }
+
+        #add-btn {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        #add-btn:hover {
+            background-color: #218838;
+        }
+
+        #task-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .task {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .task.completed {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        .task-text {
+            flex: 1;
+            cursor: pointer;
+        }
+
+        .delete-btn {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .delete-btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div class="input-section">
+            <input type="text" id="task-input" placeholder="Enter a new task">
+            <button id="add-btn">Add Task</button>
+        </div>
+        <ul id="task-list"></ul>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const taskInput = document.getElementById('task-input');
+            const addBtn = document.getElementById('add-btn');
+            const taskList = document.getElementById('task-list');
+
+            // Add task function
+            addBtn.addEventListener('click', () => {
+                const taskText = taskInput.value.trim();
+                if (taskText !== '') {
+                    addTask(taskText);
+                    taskInput.value = '';
+                }
+            });
+
+            // Function to add a new task
+            function addTask(text) {
+                const li = document.createElement('li');
+                li.className = 'task';
+
+                const taskText = document.createElement('span');
+                taskText.className = 'task-text';
+                taskText.textContent = text;
+
+                // Toggle complete on click
+                taskText.addEventListener('click', () => {
+                    li.classList.toggle('completed');
+                });
+
+                const deleteBtn = document.createElement('button');
+                deleteBtn.className = 'delete-btn';
+                deleteBtn.textContent = 'Delete';
+
+                // Delete task on click
+                deleteBtn.addEventListener('click', () => {
+                    taskList.removeChild(li);
+                });
+
+                li.appendChild(taskText);
+                li.appendChild(deleteBtn);
+                taskList.appendChild(li);
+            }
+        });
+    </script>
+</body>
+</html>

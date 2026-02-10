@@ -2,20 +2,123 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple To-Do List</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS: The Look */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            padding-top: 50px; 
+            background-color: #f0f2f5; 
+        }
+        .todo-container { 
+            background: white; 
+            padding: 2rem; 
+            border-radius: 12px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+            width: 350px; 
+        }
+        h2 { margin-top: 0; color: #333; text-align: center; }
+        
+        .input-group { display: flex; gap: 8px; margin-bottom: 1.5rem; }
+        input { 
+            flex: 1; 
+            padding: 10px; 
+            border: 2px solid #ddd; 
+            border-radius: 6px; 
+            outline: none;
+        }
+        input:focus { border-color: #007bff; }
+        
+        button#addBtn { 
+            cursor: pointer; 
+            background: #007bff; 
+            color: white; 
+            border: none; 
+            border-radius: 6px; 
+            padding: 10px 15px; 
+            font-weight: bold;
+        }
+        button#addBtn:hover { background: #0056b3; }
+
+        ul { list-style: none; padding: 0; }
+        li { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            padding: 12px; 
+            border-bottom: 1px solid #eee; 
+            transition: background 0.2s;
+        }
+        li:hover { background: #fafafa; }
+        
+        .task-text { flex: 1; cursor: pointer; }
+        .completed .task-text { text-decoration: line-through; color: #888; }
+        
+        .delete-btn { 
+            color: #ff4d4d; 
+            cursor: pointer; 
+            font-size: 18px; 
+            margin-left: 10px; 
+            font-weight: bold;
+            padding: 0 5px;
+        }
+        .delete-btn:hover { color: #cc0000; }
+    </style>
 </head>
 <body>
 
     <div class="todo-container">
         <h2>My Tasks</h2>
         <div class="input-group">
-            <input type="text" id="todoInput" placeholder="What needs to be done?">
-            <button onclick="addTask()">Add</button>
+            <input type="text" id="todoInput" placeholder="Add a new task...">
+            <button id="addBtn" onclick="addTask()">Add</button>
         </div>
         <ul id="todoList"></ul>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        // JS: The Brains
+        const input = document.getElementById('todoInput');
+        const list = document.getElementById('todoList');
+
+        // Allow adding task by pressing "Enter"
+        input.addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                addTask();
+            }
+        });
+
+        function addTask() {
+            const taskValue = input.value.trim();
+            
+            if (taskValue === "") {
+                alert("Please enter a task!");
+                return;
+            }
+
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <span class="task-text">${taskValue}</span>
+                <span class="delete-btn" title="Delete Task">&times;</span>
+            `;
+
+            // Click text to toggle completion
+            li.querySelector('.task-text').onclick = function() {
+                li.classList.toggle('completed');
+            };
+
+            // Click X to delete
+            li.querySelector('.delete-btn').onclick = function() {
+                li.remove();
+            };
+
+            list.appendChild(li);
+            input.value = ""; // Clear the box
+            input.focus();    // Put cursor back in box
+        }
+    </script>
 </body>
 </html>
