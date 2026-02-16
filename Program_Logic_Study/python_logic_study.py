@@ -442,6 +442,7 @@
 # else:
 #     print("Not Anagram")
 
+# prime number check
 n = 5
 if n <= 1:
     print("not prime")
