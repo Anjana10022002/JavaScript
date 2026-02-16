@@ -388,4 +388,18 @@
 #     reversed = s + reversed
 # print(reversed)
 
-# largest in an array 
+# # largest in an array 
+# a = [10,6,5,95,89,45,54]
+# largest = a[0]
+# for i in range(len(a)):
+#     if a[i] > largest:
+#         largest = a[i]
+# print(largest)
+
+# remove duplicates in an array 
+a = [1,3,2,1,4,6,2,3]
+result = []
+for i in a:
+    if i not in result:
+        result = a[i] + result
+print(result)
