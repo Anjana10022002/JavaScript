@@ -458,5 +458,7 @@
 #     else:
 #         print("Not Prime")
 
+# second largest number in an array 
+
 
 
