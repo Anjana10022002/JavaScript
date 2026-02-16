@@ -397,10 +397,17 @@
 # print(largest)
 
 # remove duplicates in an array 
-a = [1,3,2,1,4,6,2,3]
-result = []
-for i in a:
-    if i not in result:
-        result = a[i] + result
-print(result)
+# a = [1,3,2,1,4,6,2,3]
+# result = []
+# for i in a:
+#     if i not in result:
+#         result.append(i)
+# print(result)
 
+# fibonacci series
+a = 0
+b = 1
+for i in range(5):
+    print(a)
+    a, b = b, a + b
+    
