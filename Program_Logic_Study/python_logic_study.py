@@ -405,9 +405,43 @@
 # print(result)
 
 # fibonacci series
-a = 0
-b = 1
-for i in range(5):
-    print(a)
-    a, b = b, a + b
+# a = 0
+# b = 1
+# for i in range(5):
+#     print(a)
+#     a, b = b, a + b
     
+# frequency of character
+# a = "banana"
+# freq ={}
+# for ch in a:
+#     if ch in freq:
+#         freq[ch] +=1
+#     else:
+#         freq[ch] = 1
+# print(freq)
+    
+str1 = "listen"
+str2 = "silent"
+freq1 = {}
+freq2 = {}
+for ch in str1:
+    if ch in freq1:
+        freq1[ch] +=1
+    else:
+        freq1[ch] = 1
+
+for ch in str2:
+    if ch in freq2:
+        freq2[ch] += 1
+    else:
+        freq2[ch] = 1
+
+if freq1 == freq2:
+    print("Anagram")
+else:
+    print("Not Anagram")
+
+
+
+
