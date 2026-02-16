@@ -421,27 +421,41 @@
 #         freq[ch] = 1
 # print(freq)
     
-str1 = "listen"
-str2 = "silent"
-freq1 = {}
-freq2 = {}
-for ch in str1:
-    if ch in freq1:
-        freq1[ch] +=1
-    else:
-        freq1[ch] = 1
+# str1 = "listen"
+# str2 = "silent"
+# freq1 = {}
+# freq2 = {}
+# for ch in str1:
+#     if ch in freq1:
+#         freq1[ch] +=1
+#     else:
+#         freq1[ch] = 1
 
-for ch in str2:
-    if ch in freq2:
-        freq2[ch] += 1
-    else:
-        freq2[ch] = 1
+# for ch in str2:
+#     if ch in freq2:
+#         freq2[ch] += 1
+#     else:
+#         freq2[ch] = 1
 
-if freq1 == freq2:
-    print("Anagram")
+# if freq1 == freq2:
+#     print("Anagram")
+# else:
+#     print("Not Anagram")
+
+n = 5
+if n <= 1:
+    print("not prime")
 else:
-    print("Not Anagram")
+    is_prime = True
+    for i in range (2, n):
+        if n % i == 0:
+            is_prime = False
+            break
 
+    if is_prime:
+        print("Prime")
+    else:
+        print("Not Prime")
 
 
 
