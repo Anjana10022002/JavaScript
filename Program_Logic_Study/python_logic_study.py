@@ -372,12 +372,20 @@
 # print(arr)
 
 # 35. Find Intersection of Two Arrays
-arr1 = [1,2,3,4,5,6]
-arr2 = [5,6,7,8,9,0]
-result =[]
+# arr1 = [1,2,3,4,5,6]
+# arr2 = [5,6,7,8,9,0]
+# result =[]
 
-for i in arr1:
-    if i in arr2 and i not in result:
-        result.append(i)
-print(result)
+# for i in arr1:
+#     if i in arr2 and i not in result:
+#         result.append(i)
+# print(result)
 
+# reverse a string
+# a = "abcde"
+# reversed = ""
+# for s in a:
+#     reversed = s + reversed
+# print(reversed)
+
+# largest in an array 
