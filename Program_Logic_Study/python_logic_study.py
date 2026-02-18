@@ -382,17 +382,18 @@
 # print(result)
 
 # 36. Check array is sorted 
-arr = [1,2,3]
-is_sorted = True
-for i in range(len(arr)-1):
-    if arr[i] > arr[i+1]:
-        is_sorted = True
-        break
-if is_sorted:
-    print("The array is sorted")
-else:
-    print("The array is not sorted")
+# arr = [1,2,3]
+# is_sorted = True
+# for i in range(len(arr)-1):
+#     if arr[i] > arr[i+1]:
+#         is_sorted = True
+#         break
+# if is_sorted:
+#     print("The array is sorted")
+# else:
+#     print("The array is not sorted")
 
+# 
 
 
 
