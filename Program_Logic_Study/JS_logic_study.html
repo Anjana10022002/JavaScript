@@ -175,16 +175,17 @@
         let arr = [13,25,76,34,78,90];
         let largest = arr[i];
         let second_largest = -1;
+        for (let x of arr){
             if (x > largest){
-                second = largest;
+                second_largest = largest;
                 largest = x;
-
-
             }
+            else if (x > second_largest && x !== largest){
+                second = x;
             }
-
-
         }
+        conso;e.log("second largest:", secong)
+
 
 
 
