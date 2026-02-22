@@ -25,4 +25,15 @@
 # nums = [-2,1,-3,4,-1,2,1,-5,4]
 # print(max_subarray(nums))
 
-# 3. 
+# 3. Anagram
+def is_anagram(s, t):
+    if len(s) != len(t):
+        return False
+    count = {}
+    for char in s:
+        if char in count:
+            count[char] += 1
+        else:
+            count[char] == 1
+            
+    
