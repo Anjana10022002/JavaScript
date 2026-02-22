@@ -49,4 +49,6 @@
 # print(is_anagram("listen", "silent"))   
 
 # 4. Longest Palindromic Substring
-    
+def longest_palindrome(s):
+    if len(s) == 0:
+        return ""
