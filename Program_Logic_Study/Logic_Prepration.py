@@ -29,11 +29,24 @@
 def is_anagram(s, t):
     if len(s) != len(t):
         return False
-    count = {}
+    count1 = {}
+    count2 = {}
     for char in s:
-        if char in count:
-            count[char] += 1
+        if char in count1:
+            count1[char] += 1
         else:
-            count[char] == 1
-            
+            count1[char] == 1
+    
+    for char in t:
+        if char in count2:
+            count2[char] +=1
+        else:
+            count2[char] == 1
+
+    if count1 == count2:
+        return True
+
+print(is_anagram("listen", "silent"))   
+
+
     
