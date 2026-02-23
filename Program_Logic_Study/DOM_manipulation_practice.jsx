@@ -9,5 +9,12 @@
 <body>
     <p id="test">Hello</p>
     <button id="btn">CLick me</button>
+    <script>
+        const btn = document.getElementById("btn");
+        const txt = document.getElementById("text");
+        btn.addEventListener("click", function() {
+            txt.innerText = "Button Clicked!";
+        });
+    </script>
 </body>
 </html>
