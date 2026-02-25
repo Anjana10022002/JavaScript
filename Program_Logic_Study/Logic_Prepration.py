@@ -55,5 +55,6 @@ def longest_palindrome(s):
     start = 0 
     max_length = 1
     for i in range(len(s)):
-        
+        left = right = i
+        while left >= 0 and right < len(s) 
 
