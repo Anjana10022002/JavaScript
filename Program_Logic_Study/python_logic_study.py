@@ -475,6 +475,11 @@
 #     else:
 #         print("Not Prime")
 
-# 
+# Find second smallest elemnt
+arr = [2,4,6,8,1,9]
 
+smallest = float('inf')
+second = float('inf')
 
+for i in arr:
+    if i < smallest
