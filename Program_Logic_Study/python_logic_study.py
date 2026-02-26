@@ -397,7 +397,6 @@
 
 
 
-
 # reverse a string
 # a = "abcde"
 # reversed = ""
@@ -475,16 +474,19 @@
 #     else:
 #         print("Not Prime")
 
-# Find second smallest elemnt
-arr = [2,4,6,8,1,9]
+# 37. Find second smallest elemnt
+# arr = [2,4,6,8,1,9]
 
-smallest = float('inf')
-second = float('inf')
+# smallest = float('inf')
+# second = float('inf')
 
-for i in arr:
-    if i < smallest:
-        second = smallest
-        smallest = i
-    elif i < second and i != smallest:
-        second = i
-print("Smallest: ", second)
+# for i in arr:
+#     if i < smallest:
+#         second = smallest
+#         smallest = i
+#     elif i < second and i != smallest:
+#         second = i
+# print("Smallest: ", second)
+
+# 38. Count Frequency Without Using Dictionary / Object
+
