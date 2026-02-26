@@ -482,4 +482,9 @@ smallest = float('inf')
 second = float('inf')
 
 for i in arr:
-    if i < smallest
+    if i < smallest:
+        second = smallest
+        smallest = i
+    elif i < second and i != smallest:
+        second = i
+print("Smallest: ", second)
