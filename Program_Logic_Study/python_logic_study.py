@@ -497,4 +497,4 @@ for i in range(len(arr)):
         continue
     count = 0
     for i in range(len(arr)):
-        if arr[i]
+        if arr[i] == arr[i]:
