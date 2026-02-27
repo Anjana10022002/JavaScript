@@ -496,5 +496,8 @@ for i in range(len(arr)):
     if arr[i] in visited:
         continue
     count = 0
-    for i in range(len(arr)):
+    for j in range(len(arr)):
         if arr[i] == arr[i]:
+            count += 1
+    print(arr[i], "->", count, "times")
+    visited.append(arr[i])
