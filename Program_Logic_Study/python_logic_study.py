@@ -504,3 +504,5 @@
 
 
 # 39. Two Sum Problem
+arr = [2, 6, 4, 8, 3]
+target = 8
